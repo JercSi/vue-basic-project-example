@@ -7,8 +7,6 @@ const VuetifyLoaderPlugin = require("vuetify-loader/lib/plugin");
 const webpack = require('webpack')
 
 module.exports = (env) => {
-  console.log(env);
-
   return {
     mode: 'development',
     target: env.NODE_ENV === "development" ? "web" : "browserslist",
