@@ -1,0 +1,1 @@
+export const MODULE_A_ACTION = "MODULE_A_ACTION";
