@@ -1,10 +1,15 @@
 import Home from "@/views/Home.vue";
 
+import {
+  guard1
+} from '../NavigationGuards'
+
 export const routes = [
   {
     path: "/home",
     name: "Home",
-    component: Home
+    component: Home,
+    beforeEnter: guard1,
   },
   {
     path: "/about-b",
