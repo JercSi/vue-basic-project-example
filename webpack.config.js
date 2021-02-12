@@ -93,6 +93,11 @@ module.exports = (env) => {
             outputPath: "assets/img",
             esModule: false
           }
+        },
+        {
+          resourceQuery: /blockType=i18n/,
+          type: 'javascript/auto',
+          loader: '@kazupon/vue-i18n-loader'
         }
       ]
     },

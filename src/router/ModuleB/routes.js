@@ -12,12 +12,12 @@ export const routes = [
     beforeEnter: guard1,
   },
   {
-    path: "/about-b",
-    name: "AboutB",
+    path: "/localization",
+    name: "Localization",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/ModuleB/About.vue")
+      import(/* webpackChunkName: "about" */ "@/views/ModuleB/Localization.vue")
   }
 ];
