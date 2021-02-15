@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "vue-cli-service lint",
-    "webpack-build": "webpack --mode production --env NODE_ENV=production",
-    "webpack-start": "webpack serve --mode development --progress --env NODE_ENV=development"
+    "webpack-build": "webpack --mode production --config webpack.prod.js",
+    "webpack-start": "webpack serve --mode development --progress --config webpack.dev.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -51,6 +51,7 @@
     "vuetify-loader": "^1.7.0",
     "webpack": "^5.20.1",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   }
 }
