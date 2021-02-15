@@ -6,7 +6,7 @@
           <router-link :to="{ name: 'Home' }">Home</router-link>
         </v-col>
         <v-col md="auto">
-          <router-link :to="{ name: 'HomeB' }">Home (moduleB)</router-link>
+          <router-link :to="{ name: 'HomeLazy' }">Home (Lazy)</router-link>
         </v-col>
         <v-col md="auto">
           <router-link to="/about">About</router-link>

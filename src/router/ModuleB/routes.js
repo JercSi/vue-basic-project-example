@@ -1,15 +1,12 @@
-import Home from "@/views/ModuleB/Home.vue";
-
-import {
-  guard1
-} from '../NavigationGuards'
+import { guard1 } from "../NavigationGuards";
 
 export const routes = [
   {
-    path: "/home",
-    name: "HomeB",
-    component: Home,
-    beforeEnter: guard1,
+    path: "/home-lazy",
+    name: "HomeLazy",
+    component: () =>
+      import(/* webpackChunkName: "homelazy" */ "@/views/ModuleB/HomeLazy.vue"),
+    beforeEnter: guard1
   },
   {
     path: "/localization",
