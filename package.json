@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "vue-cli-service lint",
-    "webpack-build": "webpack --mode production --config webpack.prod.js",
+    "webpack-build": "webpack --mode production --progress --config webpack.prod.js",
     "webpack-start": "webpack serve --mode development --progress --config webpack.dev.js"
   },
   "dependencies": {
