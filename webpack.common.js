@@ -1,5 +1,4 @@
 const { VueLoaderPlugin } = require("vue-loader");
-const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
@@ -9,13 +8,6 @@ const webpack = require("webpack");
 module.exports = {
   entry: {
     main: "./src/main.js"
-  },
-  output: {
-    filename: "[name].[contenthash:8].js",
-    path: path.resolve(__dirname, "dist"),
-    // publicPath: "/vue-clean/dist/",
-    publicPath: "/",
-    chunkFilename: "[name].[contenthash:8].js"
   },
   module: {
     rules: [
@@ -102,16 +94,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: "[name].[contenthash:8].css",
-      chunkFilename: "[name].[contenthash:8].css"
-    }),
-    new htmlWebpackPlugin({
-      template: path.resolve(__dirname, "public", "index.html"),
-      favicon: "./public/favicon.ico"
-    }),
-    new VuetifyLoaderPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new VuetifyLoaderPlugin()
   ],
   resolve: {
     alias: {
