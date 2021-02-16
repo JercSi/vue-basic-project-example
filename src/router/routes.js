@@ -1,4 +1,19 @@
-import { routes as ModuleA }from './ModuleA/routes'
-import { routes as ModuleB }from './ModuleB/routes'
+import { routes as ModuleA } from "./ModuleA/routes";
+import { routes as ModuleB } from "./ModuleB/routes";
 
-export const routes = [ ...ModuleA, ...ModuleB] 
+
+// Static pages
+import StaticView from "@/views/StaticView.vue";
+const customRoutes = [
+  {
+    path: "/static-content",
+    name: "StaticView",
+    component: StaticView
+  },
+  {
+    path: '*',
+    redirect: '/'
+  }
+]
+
+export const routes = [...ModuleA, ...ModuleB, ...customRoutes];

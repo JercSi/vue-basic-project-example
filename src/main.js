@@ -15,5 +15,10 @@ new Vue({
   router,
   store,
   vuetify,
-  render: h => h(App)
+  render: h => h(App),
+  mounted () {
+    this.$nextTick(() => {
+      document.dispatchEvent(new Event('my-document-event'))
+    });
+  }
 }).$mount("#app");

@@ -1,38 +1,43 @@
 <template>
-  <v-app id="app">
-    <v-container>
-      <v-row align="center" justify="center">
-        <v-col md="auto">
-          <router-link :to="{ name: 'Home' }">Home</router-link>
-        </v-col>
-        <v-col md="auto">
-          <router-link :to="{ name: 'HomeLazy' }">Home (Lazy)</router-link>
-        </v-col>
-        <v-col md="auto">
-          <router-link to="/about">About</router-link>
-        </v-col>
-        <v-col md="auto">
-          <router-link to="/localization">Localization</router-link>
-        </v-col>
-      </v-row>
-    </v-container>
+  <div id="app">
+    <v-app>
+      <v-container>
+        <v-row align="center" justify="center">
+          <v-col md="auto">
+            <router-link :to="{ name: 'Home' }">Home</router-link>
+          </v-col>
+          <v-col md="auto">
+            <router-link :to="{ name: 'HomeLazy' }">Home (Lazy)</router-link>
+          </v-col>
+          <v-col md="auto">
+            <router-link to="/about">About</router-link> 
+          </v-col>
+          <v-col md="auto">
+            <router-link to="/localization">Localization</router-link>
+          </v-col>
+          <v-col md="auto">
+            <router-link to="/static-content">Static content (prerender)</router-link>
+          </v-col>
+        </v-row>
+      </v-container>
 
-    <router-view></router-view>
+      <router-view></router-view>
 
-    <v-container>
-      <v-row align="center" justify="center">
-        <v-col
-          md="auto"
-        >
-        <v-select
-          :items="langs"
-          label="Language"
-          v-model="locale"
-        ></v-select>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-app>
+      <v-container>
+        <v-row align="center" justify="center">
+          <v-col
+            md="auto"
+          >
+          <v-select
+            :items="langs"
+            label="Language"
+            v-model="locale"
+          ></v-select>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-app>
+  </div>
 </template>
 
 <script>
