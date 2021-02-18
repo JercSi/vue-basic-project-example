@@ -28,11 +28,20 @@ module.exports = merge(common, {
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, 'dist'),
       outputDir: path.join(__dirname, 'dist'),
-      routes: [ '/static-content' ],
+      routes: [ '/static-content.html' ],
       renderer: new PuppeteerRenderer({
         headless: true,
         renderAfterDocumentEvent: 'my-document-event'
-      })
+      }),
+      postProcess(context) {
+        // Remove /index.html from the output path if the dir name ends with a .html file extension.
+        // For example: /dist/dir/special.html/index.html -> /dist/dir/special.html
+        if (context.route.endsWith('.html')) {
+          context.outputPath = path.join(__dirname, 'dist', context.route)
+        }
+                
+        return context
+      }
     })
   ]
 });

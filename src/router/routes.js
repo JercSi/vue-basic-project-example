@@ -6,7 +6,7 @@ import { routes as ModuleB } from "./ModuleB/routes";
 import StaticView from "@/views/StaticView.vue";
 const customRoutes = [
   {
-    path: "/static-content",
+    path: "/static-content.html",
     name: "StaticView",
     component: StaticView
   },

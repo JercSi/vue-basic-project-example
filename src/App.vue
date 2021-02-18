@@ -16,7 +16,7 @@
             <router-link to="/localization">Localization</router-link>
           </v-col>
           <v-col md="auto">
-            <router-link to="/static-content">Static content (prerender)</router-link>
+            <router-link to="/static-content.html">Static content (prerender)</router-link>
           </v-col>
         </v-row>
       </v-container>
